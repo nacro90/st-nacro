@@ -101,33 +101,50 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+#define NORD0 "#2E3440"
+#define NORD1 "#3B4252"
+#define NORD2 "#434C5E"
+#define NORD3 "#4C566A"
+#define NORD4 "#D8DEE9"
+#define NORD5 "#E5E9F0"
+#define NORD6 "#ECEFF4"
+#define NORD7 "#8FBCBB"
+#define NORD8 "#88C0D0"
+#define NORD9 "#81A1C1"
+#define NORD10 "#5E81AC"
+#define NORD11 "#BF616A"
+#define NORD12 "#D08770"
+#define NORD13 "#EBCB8B"
+#define NORD14 "#A3BE8C"
+#define NORD15 "#B48EAD"
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	NORD1,
+	NORD11,
+	NORD14,
+	NORD13,
+	NORD9,
+	NORD15,
+	NORD8,
+	NORD5,
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	NORD3,
+	NORD11,
+	NORD14,
+	NORD13,
+	NORD9,
+	NORD15,
+	NORD7,
+	NORD6,
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	NORD0,
+	NORD4,
 };
 
 
@@ -135,10 +152,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
