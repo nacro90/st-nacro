@@ -99,7 +99,7 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 #define NORD0 "#2E3440"
 #define NORD1 "#3B4252"
